@@ -7,7 +7,40 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<Page.Resources>
+		<Style TargetType="TextBlock" x:Key="Title">
+			<Setter Property="FontSize" Value="50"/>
+			<Setter Property="FontFamily" Value="Segoe UI" />
+			<Setter Property="Foreground" Value="Black" />
+			<Setter Property="HorizontalAlignment" Value="Center" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+			<Setter Property="Text" Value="Title" />
+			<Setter Property="Margin" Value="20" />
+		</Style>
 
+		<Style TargetType="Button" x:Key="Std">
+			<Setter Property="FontSize" Value="30"/>
+			<Setter Property="FontFamily" Value="Segoe UI" />
+			<Setter Property="Foreground" Value="Black" />
+			<Setter Property="HorizontalAlignment" Value="Center" />
+			<Setter Property="VerticalAlignment" Value="Center" />
+			<Setter Property="Margin" Value="10" />
+			<Setter Property="Background" Value="#22AAAAAA" />
+		</Style>
+
+	</Page.Resources>
+	
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<StackPanel VerticalAlignment="Stretch">
+			<TextBlock x:Name="TitleBox" Style="{StaticResource Title}" Text="UX Map"/>
+			<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+				<Button x:Name="NewProjectButton" Style="{StaticResource Std}">
+					New
+				</Button>
+				<Button x:Name="OpenProjectButton" Style="{StaticResource Std}" >
+					Open
+				</Button>
+			</StackPanel>
+		</StackPanel>
     </Grid>
 </Page>
